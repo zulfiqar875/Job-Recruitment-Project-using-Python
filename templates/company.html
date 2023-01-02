@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+
+    <!-- <link rel="icon" type="image/ico" href="https://i.pinimg.com/originals/16/aa/df/16aadf06716be2bb9c958b31ee1173a1.jpg" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Sign Up</title>
+</head>
+<style>
+    body {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/005/585/798/non_2x/abstract-dark-purple-background-overlap-layer-on-dark-space-for-background-design-exclusive-wallpaper-design-for-poster-brochure-presentation-website-etc-vector.jpg');
+        background-position: center;
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+        /* max-width: 800px; */
+    }
+
+    #name {
+        font-family: 'roboto';
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg border-bottom border-light">
+            <!-- Container wrapper -->
+            <div class="container">
+                <h3 class="navbar-brand me-2 text-light">
+                    Job Recuirment
+                </h3>
+
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <!-- <a class="nav-link" href="#">Dashboard</a> -->
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+
+                    <div class="d-flex align-items-center">
+                        <a type="button" href="/login/home" class="btn text-light me-2">
+                            Home
+                        </a>
+                        <a type="button" href="/login/company" class="btn text-light me-3">
+                            Company
+                        </a>
+                        <a type="button" href="/login/user" class="btn text-light me-3">
+                            User
+                        </a>
+                        <a type="button" href="/login/job" class="btn text-light me-3">
+                            Job
+                        </a>
+                        <a href="/logout" type="button" class="btn text-light me-3">
+                            Logout
+                        </a>
+
+                    </div>
+                </div>
+                <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </div>
+
+    <div class="dashboard mt-5 ">
+        <h2 class="text-light text-center">Companies</h4>
+            <div class="button ml-5">
+                <button type="button" class="btn btn-light text-dark" data-toggle="modal" data-target="#exampleModal">
+                    Add new Company
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Add New Company</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="company" action="/createcompany" method="POST">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <input type="text" name="companyname" required placeholder="Company Name"
+                                                class="form-control mt-2" id="">
+                                            <input type="text" name="companyowner" required placeholder="Company Owner"
+                                                class="form-control mt-2" id="">
+                                            <input type="text" name="companysector" required placeholder="Company Sector"
+                                                class="form-control mt-2" id="">
+                                            <input type="text" name="companyaddress" required placeholder="Company Address"
+                                                class="form-control mt-2" id="">
+                                            <input type="text" name="companycontact" required placeholder="Company Contact"
+                                                class="form-control mt-2" id="">
+                                            <input type="text" name="companyemail" required placeholder="Company Email"
+                                                class="form-control mt-2" id="">
+                                            <input type="text" name="companypassword" required placeholder="Company Password"
+                                                class="form-control mt-2" id="">
+                                            <select name="companystatus" required class="form-control mt-2" id="">
+                                                <option value="" selected disabled>-- Select Status --</option>
+                                                <option value="Active">Active</option>
+                                                <option value="Disable">Disable</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <input type="submit" value="Add" class="btn btn-primary text-light">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive p-5">
+                <table class="table text-light">
+                    <thead class="bg-light text-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Company Name</th>
+                            <th scope="col">Owner Name</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in company %}
+                            <tr>
+                                <th scope="row">-</th>
+                                <td>{{row.Fname}}</td>
+                                <td>{{row.Lname}}</td>
+                                <td>{{row.Cnic}}</td>
+                                <td>{{row.Email}}</td>
+                                <td>{{row.Address}}</td>
+                                <td class="text-success"> <i class="fa fa-circle" aria-hidden="true"></i> {{row.Postalcode}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+    </div>
+
+    <div class="footer m-3 text-light text-center">
+        <h6>All Rights Reserved: @2022 </h6>
+    </div>
+
+
+</body>
+
+<script>
+    function calculateAmount() {
+        alert('Are you Sure')
+        document.getElementById("company").submit();
+    }
+</script>
+
+
+</html>

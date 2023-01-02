@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+    <title>Sign Up</title>
+</head>
+<style>
+    body {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/005/585/798/non_2x/abstract-dark-purple-background-overlap-layer-on-dark-space-for-background-design-exclusive-wallpaper-design-for-poster-brochure-presentation-website-etc-vector.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* max-width: 800px; */
+    }
+
+    #name {
+        font-family: 'roboto';
+    }
+
+    /* .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    } */
+</style>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg border-bottom border-light">
+            <!-- Container wrapper -->
+            <div class="container">
+                <h3 class="navbar-brand me-2 text-light">
+                    Job Recuirment
+                </h3>
+
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <!-- <a class="nav-link" href="#">Dashboard</a> -->
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+
+                    <div class="d-flex align-items-center">
+                        <a type="button" href="/login/home" class="btn text-light me-2">
+                            Home
+                        </a>
+                        <button type="button" class="btn text-light me-3">
+                            Jobs
+                        </button>
+                        <a type="button" href="/login/resume" class="btn text-light me-3">
+                            Resume
+                        </a>
+                        <a href="/logout" type="button" class="btn text-light me-3">
+                            Logout
+                        </a>
+
+                    </div>
+                </div>
+                <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </div>
+
+    <div class="dashboard mt-1 p-5">
+        <h2 class="text-light">Resume</h4>
+            <form id="cv" action="/createresume" method="POST">
+                <div class="row text-light">
+                    <h4 class="border-bottom border-light">Education</h3>
+                        <div class="row">
+                            <input type="hidden" name="Uid" value="{{userid}}" id="">
+                            <div class="col-sm-4">
+                                <label for="">Last Degree</label>
+                                <select name="degree1" id="" required class="form-control">
+                                    <option value="" selected disabled> -- Select --</option>
+                                    <option value="Master">Master</option>
+                                    <option value="Baheclor">Baheclor</option>
+                                    <option value="FSC/FCS">FSC/FCS</option>
+                                    <option value="Matric">Matric</option>
+                                    <option value="Midle">Midle</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Passout Year</label>
+                                <input type="date" name="pass1" required id="" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Status</label>
+                                <select name="status1" id="" required class="form-control">
+                                    <option value="" selected disabled> -- select --</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Enroll">Enroll</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="">Last Degree</label>
+                                <select name="degre2" id="" class="form-control">
+                                    <option value="" selected disabled> -- Select --</option>
+                                    <option value="Master">Master</option>
+                                    <option value="Baheclor">Baheclor</option>
+                                    <option value="FSC/FCS">FSC/FCS</option>
+                                    <option value="Matric">Matric</option>
+                                    <option value="Midle">Midle</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Passout Year</label>
+                                <input type="date" name="pass2" id="" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Status</label>
+                                <select name="status2" id="" class="form-control">
+                                    <option value="" selected disabled> -- select --</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Enroll">Enroll</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="">Last Degree</label>
+                                <select name="degree3" id="" class="form-control">
+                                    <option value="" selected disabled> -- Select --</option>
+                                    <option value="Master">Master</option>
+                                    <option value="Baheclor">Baheclor</option>
+                                    <option value="FSC/FCS">FSC/FCS</option>
+                                    <option value="Matric">Matric</option>
+                                    <option value="Midle">Midle</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Passout Year</label>
+                                <input type="date" name="pass3" id="" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Status</label>
+                                <select name="status3" id="" class="form-control">
+                                    <option value="" selected disabled> -- select --</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Enroll">Enroll</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="">Last Degree</label>
+                                <select name="degre4" id="" class="form-control">
+                                    <option value="" selected disabled> -- Select --</option>
+                                    <option value="Master">Master</option>
+                                    <option value="Baheclor">Baheclor</option>
+                                    <option value="FSC/FCS">FSC/FCS</option>
+                                    <option value="Matric">Matric</option>
+                                    <option value="Midle">Midle</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Passout Year</label>
+                                <input type="date" name="pass4" id="" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Status</label>
+                                <select name="status4" id="" class="form-control">
+                                    <option value="" selected disabled> -- select --</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Enroll">Enroll</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="">Last Degree</label>
+                                <select name="degree5" id="" class="form-control">
+                                    <option value="" selected disabled> -- Select --</option>
+                                    <option value="Master">Master</option>
+                                    <option value="Baheclor">Baheclor</option>
+                                    <option value="FSC/FCS">FSC/FCS</option>
+                                    <option value="Matric">Matric</option>
+                                    <option value="Midle">Midle</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Passout Year</label>
+                                <input type="date" name="pass5" id="" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Status</label>
+                                <select name="status5" id="" class="form-control">
+                                    <option value="" selected disabled> -- select --</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Enroll">Enroll</option>
+                                </select>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="row text-light mt-3">
+                    <h4 class="border-bottom border-light">Experience</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="">Company</label>
+                                <input type="text" name="company1" required class="form-control" id="">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Desgination</label>
+                                <input type="text" name="dest1" class="form-control" id="">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">Start</label>
+                                <input type="date" name="sdate1" id="" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">End</label>
+                                <input type="date" name="edate1" id="" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="">Company</label>
+                                <input type="text" name="company2" class="form-control" id="">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Desgination</label>
+                                <input type="text" name="dest2" class="form-control" id="">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">Start</label>
+                                <input type="date" name="sdate2" id="" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">End</label>
+                                <input type="date" name="edate2" id="" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="">Company</label>
+                                <input type="text" name="company3" class="form-control" id="">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Desgination</label>
+                                <input type="text" name="dest3" class="form-control" id="">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">Start</label>
+                                <input type="date" name="sdate3" id="" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">End</label>
+                                <input type="date" name="edate3" id="" class="form-control">
+                            </div>
+                        </div>
+                </div>
+
+                <div class="row text-light mt-3">
+                    <h4 class="border-bottom border-light">Certification</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="">Company</label>
+                                <input type="text" name="certificate1" required class="form-control" id="">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Title</label>
+                                <input type="text" name="title1" required class="form-control" id="">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">Start</label>
+                                <input type="date" name="csdate1" required id="" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">End</label>
+                                <input type="date" name="cedate1" required id="" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="">Company</label>
+                                <input type="text" name="certificate2" class="form-control" id="">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Tile</label>
+                                <input type="text" name="title2" class="form-control" id="">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">Start</label>
+                                <input type="date" name="csdate2" id="" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">End</label>
+                                <input type="date" name="cedate2" id="" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="">Company</label>
+                                <input type="text" name="certificate3" class="form-control" id="">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Title</label>
+                                <input type="text" name="title3" class="form-control" id="">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">Start</label>
+                                <input type="date" name="csdate3" id="" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="">End</label>
+                                <input type="date" name="cedate3" id="" class="form-control">
+                            </div>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row text-light mt-3">
+                            <h4 class="border-bottom border-light">Skills</h3>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <label for="">Skill Name</label>
+                                        <input type="text" name="skill1" required class="form-control" id="">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="">Skill Level</label>
+                                        <select name="level1" required class="form-control" id="">
+                                            <option value="" selected disabled>-- select --</option>
+                                            <option value="Beginner">Beginner</option>
+                                            <option value="Intermediate">Intermediate</option>
+                                            <option value="Expert">Expert</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <label for="">Skill Name</label>
+                                        <input type="text" name="skill2" class="form-control" id="">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="">Skill Level</label>
+                                        <select name="level2" class="form-control" id="">
+                                            <option value="" selected disabled>-- select --</option>
+                                            <option value="Beginner">Beginner</option>
+                                            <option value="Intermediate">Intermediate</option>
+                                            <option value="Expert">Expert</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <label for="">Skill Name</label>
+                                        <input type="text" name="skill3" class="form-control" id="">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="">Skill Level</label>
+                                        <select name="level3" class="form-control" id="">
+                                            <option value="" selected disabled>-- select --</option>
+                                            <option value="Beginner">Beginner</option>
+                                            <option value="Intermediate">Intermediate</option>
+                                            <option value="Expert">Expert</option>
+                                        </select>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row text-light mt-3">
+                            <h4 class="border-bottom border-light">Languages</h3>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <label for="">Language Name</label>
+                                        <input type="text" name="language1" class="form-control" id="">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="">Proficiency Level</label>
+                                        <select name="llevel1" id="" class="form-control">
+                                            <option value="" selected disabled>-- select--</option>
+                                            <option value="Fluent">Fluent</option>
+                                            <option value="Native">Native</option>
+                                            <option value="Professional">Professional</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <label for="">Language Name</label>
+                                        <input type="text" name="language2" class="form-control" id="">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="">Proficiency Level</label>
+                                        <select name="llevel2" id="" class="form-control">
+                                            <option value="" selected disabled>-- select--</option>
+                                            <option value="Fluent">Fluent</option>
+                                            <option value="Native">Native</option>
+                                            <option value="Professional">Professional</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <label for="">Language Name</label>
+                                        <input type="text" name="language3" class="form-control" id="">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="">Proficiency Level</label>
+                                        <select name="llevel3" id="" class="form-control">
+                                            <option value="" selected disabled>-- select--</option>
+                                            <option value="Fluent">Fluent</option>
+                                            <option value="Native">Native</option>
+                                            <option value="Professional">Professional</option>
+                                        </select>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="row text-light mt-3">
+                            <h4 class="border-bottom border-light">Job Sector</h3>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label for="">Select Job</label>
+                                        <select name="job" required class="form-control" id="">
+                                            <option value="" selected disabled>-- select --</option>
+                                            <option value="Accountancy, Banking and Finance">Accountancy, Banking and Finance</option>
+                                            <option value="Engineering and Manufacturing">Engineering and Manufacturing
+                                            </option>
+                                            <option value="Agriculture">Agriculture</option>
+                                            <option value="Health">Health</option>
+                                            <option value="Property and Construction">Property and Construction</option>
+                                            <option value="Education">Education</option>
+                                        </select>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr class="border border-light">
+
+                <div class="row mt-2">
+                    <div class="col-sm-4">
+                        <input type="submit" value="Create My Resume" class=" form-control btn btn-light text-dark">
+                    </div>
+                </div>
+            </form>
+    </div>
+
+    <div class="footer m-3 text-light">
+        <h6>All Rights Reserved: @2022 </h6>
+    </div>
+
+
+</body>
+
+<script>
+    function calculateAmount() {
+        alert('Are you Sure')
+        document.getElementById("cv").submit();
+    }
+</script>
+
+
+</html>

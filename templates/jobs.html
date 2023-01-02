@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+    <title>Sign Up</title>
+</head>
+<style>
+    body {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/005/585/798/non_2x/abstract-dark-purple-background-overlap-layer-on-dark-space-for-background-design-exclusive-wallpaper-design-for-poster-brochure-presentation-website-etc-vector.jpg');
+        background-position: center;
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+        /* max-width: 800px; */
+    }
+
+    #name {
+        font-family: 'roboto';
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg border-bottom border-light">
+            <!-- Container wrapper -->
+            <div class="container">
+                <h3 class="navbar-brand me-2 text-light">
+                    Job Recuirment
+                </h3>
+
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+
+                    <div class="d-flex align-items-center"></div>
+                    <a type="button" href="/login/home" class="btn text-light me-2">
+                        Home
+                    </a>
+                    <a type="button" href="/login/newjobs" class="btn text-light me-3">
+                        New Jobs
+                    </a>
+                    <a type="button" href="/login/appliedjob" class="btn text-light me-3">
+                        Applied Job
+                    </a>
+                    <a type="button" href="/login/resume" class="btn text-light me-3">
+                        Resume
+                    </a>
+                    <a href="/logout" type="button" class="btn text-light me-3">
+                        Logout
+                    </a>
+
+                </div>
+            </div>
+            <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+    </div>
+
+    <div class="dashboard mt-5 text-center">
+
+        <div class="table-responsive p-5">
+            <h2 class="text-light" >New Jobs</h4>
+            <table class="table text-light mt-2">
+                <thead class="bg-light text-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Job Name</th>
+                        <th scope="col">Sector</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Salary</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in company %}
+                    <tr>
+                        <th scope="row">-</th>
+                        <td>{{row.Title}}</td>
+                        <td>{{row.Sector}}</td>
+                        <td>-</td>
+                        <td>{{row.Type}}</td>
+                        <td>{{row.Salary}}</td>
+
+                        <td>
+                            <form action="/jobview" method="post">
+                                <input type="hidden" name="jid" value="{{row.Jid}}">
+                                <input type="hidden" name="cid" value="{{row.Cid}}">
+                                <input type="submit" value="View More >>" class="btn">
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer m-3 text-light text-center">
+        <h6>All Rights Reserved: @2022 </h6>
+    </div>
+
+
+</body>
+
+<script>
+    function calculateAmount() {
+        alert('Are you Sure')
+        document.getElementById("myForm").submit();
+    }
+</script>
+
+
+</html>
